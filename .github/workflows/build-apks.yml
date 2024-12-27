@@ -14,15 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v4.1.0
-    - name: Setup PNPM
-      uses: pnpm/action-setup@v4
+    - uses: actions/setup-node@v4.1.0
+    - uses: pnpm/action-setup@v4
       with:
         version: 9
-    - name: Install
-      run: pnpm install
-    - name: Prepare
-      run: pnpm prepare
-    - name: Build APKS
-      run: pnpm build
+    - run: pnpm install
+    - run: pnpm build
+    - uses: actions/upload-artifact@v4
+      with:
+        name: apps-bundle
+        path: target
