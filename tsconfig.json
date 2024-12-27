@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "module": "NodeNext",
+    "target": "ES2022",
+    "strict": true,
+    "moduleResolution": "bundler"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "revanced-app-builders",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "",
+  "scripts": {
+    "prepare": "pnpm run /^prepare-.*/",
+    "prepare-apks": "tsx ./src/prepare-apks.ts",
+    "prepare-docker-image": "tsx ./src/prepare-docker-image.ts",
+    "prepare-patches": "tsx ./src/prepare-patches.ts",
+    "build": "tsx ./src/build.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.10.2",
+    "apkmirror-downloader": "^2.0.8",
+    "nodejs-file-downloader": "^4.13.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "type": "module"
+}
